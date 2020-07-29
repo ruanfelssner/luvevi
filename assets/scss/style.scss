@@ -1,3 +1,209 @@
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
 body{
-    background:red;
+    background:#FFF;
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size:14px;
+}
+
+@media (min-width: 1200px){  
+    .container {
+        max-width: 1440px;
+    }
+}
+p{
+  margin:0;
+}
+a{
+  color:#333333;
+}
+button, select, input{
+    outline:none;
+    &:hover{
+      transition: all .4s ease-in;
+    }
+    &:focus{
+      outline:none; 
+    }
+}
+
+header{
+  .barra_topo{
+    background:#333333;
+    color:#FFF;
+    padding:.3rem 0;
+  }
+  .mid_topo{
+    padding:2rem 0 0;
+    .pesquisa{
+      .dgwt-wcas-search-input{
+        border:0;
+        border-bottom:1px solid #00000057;
+        display:inline-flex;
+        width:90%;
+      }
+      button{
+        background:none;
+        border:0;
+        display:inline-flex;
+      }
+    }
+    .minha_conta{
+      font-size:30px;
+      a{
+        margin-left:10px;
+      }
+    }
+  }
+  .menu_principal{
+    position: relative;
+    .abre_menu{
+      text-transform: uppercase;
+      padding: 1rem 0;
+      display: block;
+    }
+    .submenu{
+      position:initial;
+    }
+    .sub{
+      display:none;
+      position: absolute;
+      z-index:2;
+      width:100%;
+      left:0;
+      top:50px;
+      .menus{
+        background:#FFF;
+        width:100%;
+        padding:1rem 15px;
+        .content{
+          padding:0 2rem;
+          h1{
+            font-size:19px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin:0;
+          }
+          ul{
+            display:inline-block;
+            margin:0;
+            padding:0;
+            margin-right:2rem;
+            li{
+              list-style:none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.produtos, .maisvendidos{
+  .titulo{
+    font-size:22px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin:0;
+    text-align: center;
+  }
+  .product{
+    border: 1px solid #efefef;
+    margin:5px 5px 30px;
+    position:relative;
+    button{
+      position:absolute;
+      right:15px;
+      top:15px;
+      background:none;
+      border:0;
+    }
+    .img{
+      width:100%;
+      text-align: center;
+      img{
+        display:block;
+        margin:0 auto;
+      }
+    }
+    h2{
+      font-size:16px;
+      text-transform: uppercase;
+      text-align: center;
+      padding:0 1rem;
+    }
+    .price{
+      text-align: center;
+      display:block;
+    }
+    .add_to_cart_button{
+      background:#333333;
+      border-radius:15px;
+      color:#FFF;
+      padding:3px 15px;
+      text-transform: uppercase;
+      font-size:13px;
+      display:table;
+      margin:8px auto;
+      &:hover{
+        text-decoration: none;
+        opacity:.7;
+      }
+    }
+  }
+}
+
+.instagram {  
+  .titulo{
+    font-size:22px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin:0;
+    text-align: left;
+    margin-bottom:1rem;
+  }
+  .instagrampic{
+    min-height: 285px;
+    max-height: 285px;
+    overflow: hidden;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.sobre {  
+  .titulo{
+    font-size:22px;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin:0;
+    text-align: left;
+    margin-bottom:1rem;
+  }
+}
+
+footer{
+  background:#333;
+  h2{
+    color:#FFF;
+    text-transform: uppercase;
+    font-size:16px;
+  }
+  p{
+    color:#FFF;
+  }
+  .redes{
+    a{
+      color:#FFF;
+      font-size:30px;
+      &:hover{
+        opacity:.8;
+      }
+    }
+  }
 }
